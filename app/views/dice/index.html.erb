@@ -1,27 +1,28 @@
 <%
 
-cards = [2,3,4,5,6,7,8,9,10,"ace","jack","king","queen"]
+ranks = [2,3,4,5,6,7,8,9,10,"ace","jack","king","queen"]
 suits = ["clubs","diamonds","hearts","spades"]
 
-card1 = "#{cards.sample}_of_#{suits.sample}"
-card2 = "#{cards.sample}_of_#{suits.sample}"
-card3 = "#{cards.sample}_of_#{suits.sample}"
-card4 = "#{cards.sample}_of_#{suits.sample}"
-card5 = "#{cards.sample}_of_#{suits.sample}"
+deck = []
 
+for rank in ranks
+    for suit in suits
+        deck << "#{rank}_of_#{suit}"
+    end
+end
 
-total = card1+card2
+shuffled_deck = deck.shuffle
+
 %>
 
-<h1>Pick two cards </h1>
-<p>
-    <img src="/images/cards/<%= card1%>.svg">
-    <img src="/images/cards/<%= card2%>.svg">
-    <img src="/images/cards/<%= card3%>.svg">
-    <img src="/images/cards/<%= card4%>.svg">
-    <img src="/images/cards/<%= card5%>.svg">
+<h1>Pick five cards </h1>
 
-</p> 
+<img src = "/images/cards/<%= shuffled_deck[0]%>.svg">
+<img src = "/images/cards/<%= shuffled_deck[1]%>.svg">
+<img src = "/images/cards/<%= shuffled_deck[2]%>.svg">
+<img src = "/images/cards/<%= shuffled_deck[3]%>.svg">
+<img src = "/images/cards/<%= shuffled_deck[4]%>.svg">
+
 <p> 
 
 </p>
