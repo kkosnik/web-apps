@@ -1,1 +1,12 @@
-<h1> tacos are okay </h1>
+<% 
+    fillings = ["Carintas", "Al Pastor", "Steak", "Fish", "Veggie"]
+%>
+
+<h1> Gimme some tacos </h1>
+<p> Options are: </p>
+<ul>
+    <% for filling in fillings %>
+        <li><%= filling %></li>
+    <% end %>
+</ul>
+<p> Currently, there are <%= fillings.count %> kinds of tacos. </p>
